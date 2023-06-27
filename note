@@ -1,0 +1,13 @@
+Studi Kasus Stock gudang. dengan real template  (mis admin lte)
+
+
+LARAVEL 8.
+
+- 
+0813 1324 5298
+
+- dashboard (grafik, dll)
+- RAK (tempat simpan)
+- Produk manajemen (create, edit, update, delete) -ada barcode, import xls atau csv
+- Peminjam (data peminjaman, history dll)
+- Peminjaman (tgl pinjam, tgl kembali)
