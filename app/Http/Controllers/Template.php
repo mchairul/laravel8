@@ -35,12 +35,14 @@ class Template extends Controller
         $email = $request->email;
         $nohp = $request->nohp;
 
-        //echo 'nama = ' . $nama . "<br>";
-        //echo 'email = ' . $email . "<br>";
-        //echo 'nohp = ' . $nohp;
+        //simpan atau set session
+        $request->session()->put('nama', $nama);
+
+        //baca session dengan key nama
+        //$nama = $request->session()->get('nama');
 
         return view('postdata', [
-            'nama' => $nama,
+            //'nama' => $nama,
             'email' => $email,
             'nohp' => $nohp
         ]);

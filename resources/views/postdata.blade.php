@@ -3,7 +3,7 @@
 
     </head>
     <body>
-        Nama : {{ $nama }} <br>
+        Nama : {{ session()->get('nama') }} <br>
         Email : {{ $email }}<br>
         No HP : {{ $nohp }}
     </body>

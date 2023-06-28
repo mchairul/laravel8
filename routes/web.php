@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Produk;
 use App\Http\Controllers\Template;
 use App\Http\Controllers\Barang;
+use App\Http\Controllers\Blank;
+use App\Http\Controllers\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +68,13 @@ Route::get('form', function(){
 Route::post('postdata', [Template::class, 'postdata']);
 
 Route::get('listbarang', [Barang::class, 'listBarang']);
+
+///
+
+Route::get('blank', [Blank::class, 'index']);
+
+Route::get('/', [Login::class, 'login']);
+
+Route::post('auth/login', [Login::class, 'authlogin']);
+
+Route::get('logout', [Login::class, 'logout']);
