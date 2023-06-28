@@ -17,6 +17,8 @@ class Dashboard extends Controller
         $jumlahPeminjaman = Peminjaman::count();
 
         return view('dashboard', [
+            //cara 1 sidebar aktif,
+            //'pagename' => 'asd',
             'jumlahRak' => $jumlahRak,
             'jumlahProduk' => $jumlahProduk,
             'jumlahPeminjaman' => $jumlahPeminjaman

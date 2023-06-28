@@ -64,6 +64,6 @@
 
 
 @section('js')
-<script src="{{ asset('assets/js/pages/dashboard.js') }}"></script>
-<script src="{{ asset('assets/plugins/apexcharts/apexcharts.min.js') }}"></script>
+<!--<script src="{{ asset('assets/js/pages/dashboard.js') }}"></script>
+<script src="{{ asset('assets/plugins/apexcharts/apexcharts.min.js') }}"></script>-->
 @endsection
