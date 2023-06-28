@@ -8,6 +8,7 @@ use App\Http\Controllers\Template;
 use App\Http\Controllers\Barang;
 use App\Http\Controllers\Blank;
 use App\Http\Controllers\Login;
+use App\Http\Controllers\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,3 +79,5 @@ Route::get('/', [Login::class, 'login']);
 Route::post('auth/login', [Login::class, 'authlogin']);
 
 Route::get('logout', [Login::class, 'logout']);
+
+Route::get('dashboard', [Dashboard::class, 'index']);
