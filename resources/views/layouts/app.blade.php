@@ -38,6 +38,16 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+
+    @if (Session::has('pesan_alert'))
+    var pesan = "{{ Session::get('pesan_alert') }}";
+    @else
+    var pesan = '';
+    @endif
+
+    var modalShow = '';
+    </script>
 </head>
 <body>
     <div class="app align-content-stretch d-flex flex-wrap">
@@ -67,6 +77,11 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
 
     @yield('js')
-
+    
+    <script>
+         if(pesan != '') {
+            alert(pesan);
+        }
+    </script>
 </body>
 </html>
