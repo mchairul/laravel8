@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('css')
-<link href="{{ ('assets/plugins/datatables/datatables.min.css') }}" rel="stylesheet">
 @endsection
 
 @section('main-content')

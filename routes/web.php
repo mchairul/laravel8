@@ -10,6 +10,7 @@ use App\Http\Controllers\Blank;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Rak;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,4 +110,29 @@ Route::get('editrak/{id}', [Rak::class, 'editrak'])->name('editrak')
 
 //do edit
 Route::post('doeditrak', [Rak::class, 'doeditrak'])->name('doeditrak')
+->middleware('auth');
+
+/**
+ * Produk
+ */
+//show rak
+Route::get('produk', [ProdukController::class, 'index'])->name('produk')
+->middleware('auth');
+
+//add product
+Route::post('addproduk', [ProdukController::class, 'addproduk'])->name('addproduk')
+->middleware('auth');
+
+//edit
+Route::get('editproduk/{id}', [ProdukController::class, 'editproduk'])->name('editproduk')
+->middleware('auth');
+
+//barcode
+Route::get('barcode/{code}', function($barcode) {
+    return view('barcode',['data'=>$barcode]);
+})->name('barcode')
+->middleware('auth');
+
+//do edit
+Route::post('doeditproduk', [ProdukController::class, 'doeditproduk'])->name('doeditproduk')
 ->middleware('auth');

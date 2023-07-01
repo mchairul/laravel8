@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Milon\Barcode\BarcodeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -229,7 +230,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        //barcode
+        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
     ],
 
 ];

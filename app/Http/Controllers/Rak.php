@@ -22,6 +22,9 @@ class Rak extends Controller
         ]);
     }
 
+    /**
+     * terima data post dari view
+     */
     public function addrak(Request $request)
     {
         //validation
