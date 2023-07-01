@@ -86,6 +86,8 @@
 
 @section('js')
 <script src="{{ ('assets/plugins/datatables/datatables.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
     $('#tablerak').DataTable();
     

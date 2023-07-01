@@ -80,7 +80,7 @@
     
     <script>
          if(pesan != '') {
-            alert(pesan);
+            Swal.fire(pesan);
         }
     </script>
 </body>

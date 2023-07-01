@@ -11,6 +11,7 @@ use App\Http\Controllers\Login;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Rak;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\Cari;
 
 /*
 |--------------------------------------------------------------------------
@@ -135,4 +136,13 @@ Route::get('barcode/{code}', function($barcode) {
 
 //do edit
 Route::post('doeditproduk', [ProdukController::class, 'doeditproduk'])->name('doeditproduk')
+->middleware('auth');
+
+/**
+ * CARI
+ */
+Route::get('cari', [Cari::class, 'index'])->name('cari')
+->middleware('auth');
+
+Route::get('docari/{barcode}', [Cari::class, 'docari'])->name('docari')
 ->middleware('auth');

@@ -16,28 +16,28 @@
                         class="active-page"
                         @endif
                         >
-                        <a href="index.html"><i class="material-icons-two-tone">dashboard</i>Dashboard</a>
+                        <a href="{{ route('dashboard') }}"><i class="material-icons-two-tone">dashboard</i>Dashboard</a>
                     </li>
                     <li
                         @if( Request::is('rak')) 
                         class="active-page"
                         @endif
                     >
-                        <a href="mailbox.html"><i class="material-icons-two-tone">inbox</i>Rak</a>
+                        <a href="{{ route('rak') }}"><i class="material-icons-two-tone">inbox</i>Rak</a>
                     </li>
                     <li
                         @if( Request::is('kategori')) 
                         class="active-page"
                         @endif
                     >
-                        <a href="mailbox.html"><i class="material-icons-two-tone">inbox</i>Kategori</a>
+                        <a href="kategori"><i class="material-icons-two-tone">inbox</i>Kategori</a>
                     </li>
                     <li
                         @if( Request::is('produk')) 
                         class="active-page"
                         @endif
                     >
-                        <a href="file-manager.html"><i class="material-icons-two-tone">cloud_queue</i>Produk</a>
+                        <a href="{{ route('produk') }}"><i class="material-icons-two-tone">cloud_queue</i>Produk</a>
                     </li>
                     <li
                         @if( Request::is('peminjam')) 
